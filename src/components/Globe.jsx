@@ -72,6 +72,8 @@ export function Globe({ className, config = GLOBE_CONFIG }) {
       }
     };
 
+    if (!canvasRef.current) return;
+
     window.addEventListener("resize", onResize);
     onResize();
 
@@ -87,7 +89,11 @@ export function Globe({ className, config = GLOBE_CONFIG }) {
       },
     });
 
-    setTimeout(() => (canvasRef.current.style.opacity = "1"), 0);
+    setTimeout(() => {
+    if (canvasRef.current) {
+      canvasRef.current.style.opacity = "1";
+    }
+  }, 0);
     return () => {
       globe.destroy();
       window.removeEventListener("resize", onResize);
