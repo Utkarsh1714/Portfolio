@@ -10,10 +10,6 @@ const App = () => {
       <Navbar />
       <Hero />
       <About />
-      <section className='min-h-screen'></section>
-      <section className='min-h-screen'></section>
-      <section className='min-h-screen'></section>
-      <section className='min-h-screen'></section>
       {/* about */}
       {/* projects */}
       {/* experience */}
