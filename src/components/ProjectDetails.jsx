@@ -9,7 +9,7 @@ const ProjectDetails = ({
   closeModal,
 }) => {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full overflow-hidden backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full backdrop-blur-sm">
       <motion.div
         className="relative max-w-2xl border shadow-sm rounded-2xl bg-gradient-to-l from-midnight to-navy border-white/10"
         initial={{ opacity: 0, scale: 0.5 }}
@@ -41,7 +41,10 @@ const ProjectDetails = ({
             </div>
             <a className="inline-flex items-center gap-1 font-medium cursor-pointer hover-animation">
               View Project{" "}
+              <a href={href} target="none">
+
               <img src="assets/arrow-up.svg" className="size-4" href={href} />
+              </a>
             </a>
           </div>
         </div>

@@ -1,51 +1,49 @@
 export const myProjects = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "TMS (Task Management System) - SaaS Application",
     description:
       "Facilitates purchases from international websites like Amazon and eBay, allowing customers to shop from these sites and have products delivered domestically.",
     subDescription: [
       "Built a scalable application with ASP.NET Core MVC, integrating global platforms like Amazon for domestic delivery.",
       "Implemented secure authentication and database management using ASP.NET Core Identity and Entity Framework Core.",
       "Designed a responsive frontend with Tailwind CSS, enhancing user experience.",
-      "Added payment systems, localization, and product filtering for functionality improvements.",
     ],
-    href: "",
+    href: "https://saas-tms-frontend.onrender.com",
     logo: "",
     image: "/assets/projects/accessories.jpg",
     tags: [
       {
         id: 1,
-        name: "C#",
-        path: "/assets/logos/csharp.svg",
+        name: "MongoDB",
+        path: "/assets/logos/mongodb2.svg",
       },
       {
         id: 2,
-        name: ".Net",
-        path: "/assets/logos/dotnet.svg",
+        name: "Express.js",
+        path: "/assets/logos/expressjs.svg",
       },
       {
         id: 3,
-        name: "Ef Core",
-        path: "/assets/logos/efcore.png",
+        name: "React",
+        path: "/assets/logos/react.svg",
       },
       {
         id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
+        name: "Node.js",
+        path: "/assets/logos/nodejs.svg",
       },
     ],
   },
   {
     id: 2,
-    title: "Authentication & Authorization System",
+    title: "Foodza - The food delivery app",
     description:
-      "A secure authentication and authorization system using Auth0 for seamless user management.",
+      "A complete food ordering website / app using React JS, MongoDB, Express, Node JS and Razorpay payment gateway.",
     subDescription: [
-      "Integrated Auth0 for authentication, supporting OAuth, JWT, and multi-factor authentication.",
-      "Implemented role-based access control (RBAC) for fine-grained user permissions.",
-      "Developed a React-based frontend with Tailwind CSS for a sleek user experience.",
-      "Connected to a secure SQLite database for user data storage.",
+      "In this Full Stack Food delivery app I have created the Frontend website, Admin Panel and Backend server.",
+      "Authentication system so that anyone can create an account and login this food order website.",
+      "Shopping cart functionality so that user can add food items in their cart and order food from this app.",
     ],
     href: "",
     logo: "",
