@@ -3,15 +3,14 @@ export const myProjects = [
     id: 1,
     title: "TMS (Task Management System) - SaaS Application",
     description:
-      "Facilitates purchases from international websites like Amazon and eBay, allowing customers to shop from these sites and have products delivered domestically.",
+      "This is a SaaS-based Task Management System designed for multiple organizations to manage their departments, employees, tasks, and internal communications — all in one platform.",
     subDescription: [
-      "Built a scalable application with ASP.NET Core MVC, integrating global platforms like Amazon for domestic delivery.",
-      "Implemented secure authentication and database management using ASP.NET Core Identity and Entity Framework Core.",
-      "Designed a responsive frontend with Tailwind CSS, enhancing user experience.",
+      "A multi-organization task manager that allows Bosses to create departments, assign managers/employees, and track tasks efficiently.",
+      "Built using the MERN stack (MongoDB, Express, React, Node.js) with real-time features like employee status updates via Socket.IO.",
     ],
     href: "https://saas-tms-frontend.onrender.com",
     logo: "",
-    image: "/assets/projects/accessories.jpg",
+    image: "/assets/projects/tms2.png",
     tags: [
       {
         id: 1,
@@ -45,9 +44,9 @@ export const myProjects = [
       "Authentication system so that anyone can create an account and login this food order website.",
       "Shopping cart functionality so that user can add food items in their cart and order food from this app.",
     ],
-    href: "",
+    href: "https://foodza-frontend.onrender.com",
     logo: "",
-    image: "/assets/projects/auth-system.jpg",
+    image: "/assets/projects/foodza3.png",
     tags: [
       {
         id: 1,
@@ -73,149 +72,72 @@ export const myProjects = [
   },
   {
     id: 3,
-    title: "Blazor Web App",
+    title: "Pooja Salon",
     description:
-      "A modern, interactive web application built with Blazor WebAssembly and .NET Core.",
+      "Built a full-stack salon booking website using Next.js, Tailwind CSS, Reactbits, and Clerk for user authentication.",
     subDescription: [
-      "Developed a fully interactive Single Page Application (SPA) using Blazor WebAssembly.",
-      "Implemented API interactions using .NET Core for a robust backend.",
+      "Users can book appointments, view upcoming/past bookings, and all data is stored in MongoDB.",
+      "Automated email notifications are sent to both users and admin on booking actions using Nodemailer.",
       "Designed responsive UI components with Tailwind CSS for an enhanced UX.",
-      "Integrated SQLite for efficient client-side database storage.",
     ],
-    href: "",
+    href: "https://pooja-salon.vercel.app",
     logo: "",
-    image: "/assets/projects/blazor-app.jpg",
+    image: "/assets/projects/pooja-salon.png",
     tags: [
       {
         id: 1,
-        name: "Blazor",
-        path: "/assets/logos/blazor.svg",
+        name: "Next.js",
+        path: "/assets/logos/nextjs.svg",
       },
       {
         id: 2,
-        name: ".NET Core",
-        path: "/assets/logos/dotnetcore.svg",
+        name: "Tailwind CSS",
+        path: "/assets/logos/tailwindcss.svg",
       },
       {
         id: 3,
-        name: "SQLite",
-        path: "/assets/logos/sqlite.svg",
+        name: "React Bits",
+        path: "/assets/logos/reactbits.png",
       },
       {
         id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
+        name: "MongoDB",
+        path: "/assets/logos/mongodb2.svg",
       },
     ],
   },
   {
     id: 4,
-    title: "C++ Game Engine",
+    title: "Apple iPhone 3D Showcase Website",
     description:
-      "A lightweight C++ game engine designed for 2D and 3D game development.",
+      "Built using React, Tailwind CSS, GSAP, and Three.js to create a visually stunning and interactive product showcase.",
     subDescription: [
-      "Built a powerful rendering engine using OpenGL and C++.",
-      "Developed a physics engine with collision detection and particle effects.",
-      "Implemented a scripting system for easy game customization.",
-      "Optimized performance with multi-threading and efficient memory management.",
+      "Integrated 3D iPhone model using Three.js with smooth scroll-triggered animations powered by GSAP.",
+      "Designed a custom Video Carousel to display promotional clips with smooth transitions and modern UI.",
     ],
-    href: "",
-    logo: "",
+    href: "https://apple-i-phone.vercel.app/",
+    logo: "/assets/logo/apple.svg",
     image: "/assets/projects/game-engine.jpg",
     tags: [
       {
         id: 1,
-        name: "C++",
-        path: "/assets/logos/cplusplus.svg",
+        name: "React.js",
+        path: "/assets/logos/react.svg",
       },
       {
         id: 2,
-        name: "C#",
-        path: "/assets/logos/csharp.svg",
+        name: "Three.js",
+        path: "/assets/logos/threejs.png",
       },
       {
         id: 3,
-        name: "Git",
-        path: "/assets/logos/git.svg",
-      },
-      {
-        id: 4,
-        name: "Microsoft",
-        path: "/assets/logos/microsoft.svg",
-      },
-    ],
-  },
-  {
-    id: 5,
-    title: "WordPress Custom Theme",
-    description:
-      "A fully customizable WordPress theme optimized for performance and SEO.",
-    subDescription: [
-      "Developed a responsive WordPress theme using HTML5, CSS3, and JavaScript.",
-      "Integrated Tailwind CSS for modern styling and UI enhancements.",
-      "Optimized SEO and page speed using Vite.js for fast builds.",
-      "Implemented custom widgets and plugin compatibility for extended functionality.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/wordpress-theme.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "WordPress",
-        path: "/assets/logos/wordpress.svg",
-      },
-      {
-        id: 2,
-        name: "HTML5",
-        path: "/assets/logos/html5.svg",
-      },
-      {
-        id: 3,
-        name: "CSS3",
-        path: "/assets/logos/css3.svg",
-      },
-      {
-        id: 4,
-        name: "Vite.js",
-        path: "/assets/logos/vitejs.svg",
-      },
-    ],
-  },
-  {
-    id: 6,
-    title: "Online Learning Platform",
-    description:
-      "A web application that allows users to enroll in courses, watch video lectures, and take quizzes.",
-    subDescription: [
-      "Built using Blazor WebAssembly for a seamless SPA experience.",
-      "Implemented video streaming with Azure Media Services.",
-      "Added a quiz system with dynamic question generation and real-time grading.",
-      "Integrated Stripe API for secure payment processing.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/elearning.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "Blazor",
-        path: "/assets/logos/blazor.svg",
-      },
-      {
-        id: 2,
-        name: "Azure",
-        path: "/assets/logos/azure.svg",
-      },
-      {
-        id: 3,
-        name: "Stripe",
-        path: "/assets/logos/stripe.svg",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
+        name: "Tailwind CSS",
         path: "/assets/logos/tailwindcss.svg",
+      },
+      {
+        id: 4,
+        name: "GSAP",
+        path: "/assets/logos/gsap.jpg",
       },
     ],
   },

@@ -17,7 +17,7 @@ const ProjectDetails = ({
       >
         <button
           onClick={closeModal}
-          className="absolute p-2 rounded-sm top-5 right-5 bg-midnight hover:bg-gray-500"
+          className="absolute p-2 rounded-sm top-5 right-5 bg-midnight hover:bg-gray-500 cursor-pointer"
         >
           <img src="assets/close.svg" className="w-6 h-6" />
         </button>
@@ -42,8 +42,7 @@ const ProjectDetails = ({
             <a className="inline-flex items-center gap-1 font-medium cursor-pointer hover-animation">
               View Project{" "}
               <a href={href} target="none">
-
-              <img src="assets/arrow-up.svg" className="size-4" href={href} />
+                <img src="assets/arrow-up.svg" className="size-4" href={href} />
               </a>
             </a>
           </div>
