@@ -65,38 +65,78 @@ export function Globe({ className, config = GLOBE_CONFIG }) {
     }
   };
 
+  // useEffect(() => {
+  //   const onResize = () => {
+  //     if (canvasRef.current) {
+  //       width = canvasRef.current.offsetWidth;
+  //     }
+  //   };
+
+  //   if (!canvasRef.current) return;
+
+  //   window.addEventListener("resize", onResize);
+  //   onResize();
+
+  //   const globe = createGlobe(canvasRef.current, {
+  //     ...config,
+  //     width: width * 2,
+  //     height: width * 2,
+  //     onRender: (state) => {
+  //       if (!pointerInteracting.current) phi += 0.005;
+  //       state.phi = phi + rs.get();
+  //       state.width = width * 2;
+  //       state.height = width * 2;
+  //     },
+  //   });
+
+  //   setTimeout(() => {
+  //   if (canvasRef.current) {
+  //     canvasRef.current.style.opacity = "1";
+  //   }
+  // }, 0);
+  //   return () => {
+  //     globe.destroy();
+  //     window.removeEventListener("resize", onResize);
+  //   };
+  // }, [rs, config]);
+
   useEffect(() => {
-    const onResize = () => {
-      if (canvasRef.current) {
-        width = canvasRef.current.offsetWidth;
-      }
+    let globe = null;
+    let animationFrame;
+
+    const initGlobe = () => {
+      const canvas = canvasRef.current;
+      if (!canvas) return;
+
+      const onResize = () => {
+        width = canvas.offsetWidth;
+      };
+
+      window.addEventListener("resize", onResize);
+      onResize();
+
+      globe = createGlobe(canvas, {
+        ...config,
+        width: width * 2,
+        height: width * 2,
+        onRender: (state) => {
+          if (!pointerInteracting.current) phi += 0.005;
+          state.phi = phi + rs.get();
+          state.width = width * 2;
+          state.height = width * 2;
+        },
+      });
+
+      canvas.style.opacity = "1";
     };
 
-    if (!canvasRef.current) return;
+    // Delay execution to ensure DOM is mounted
+    animationFrame = requestAnimationFrame(initGlobe);
 
-    window.addEventListener("resize", onResize);
-    onResize();
-
-    const globe = createGlobe(canvasRef.current, {
-      ...config,
-      width: width * 2,
-      height: width * 2,
-      onRender: (state) => {
-        if (!pointerInteracting.current) phi += 0.005;
-        state.phi = phi + rs.get();
-        state.width = width * 2;
-        state.height = width * 2;
-      },
-    });
-
-    setTimeout(() => {
-    if (canvasRef.current) {
-      canvasRef.current.style.opacity = "1";
-    }
-  }, 0);
     return () => {
-      globe.destroy();
-      window.removeEventListener("resize", onResize);
+      if (globe) globe.destroy();
+      window.removeEventListener("resize", () => {});
+      cancelAnimationFrame(animationFrame);
     };
   }, [rs, config]);
 

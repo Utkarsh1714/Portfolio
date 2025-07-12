@@ -117,7 +117,7 @@ export const myProjects = [
     ],
     href: "https://apple-i-phone.vercel.app/",
     logo: "/assets/logo/apple.svg",
-    image: "/assets/projects/game-engine.jpg",
+    image: "/assets/projects/apple-website.png",
     tags: [
       {
         id: 1,
