@@ -11,25 +11,44 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 import { useMotionValue, useSpring } from "motion/react";
 import { useFrame } from "@react-three/fiber";
 
+// Check if mobile (optional performance boost)
+const isMobile = window.innerWidth < 768;
+
 export function Astronaut(props) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(
-    "/models/tenhun_falling_spaceman_fanart.glb"
+    "/models/tenhun_falling_spaceman_fanart-v1.glb"
   );
   const { actions } = useAnimations(animations, group);
+
+  // Play the default animation if available
   useEffect(() => {
     if (animations.length > 0) {
       actions[animations[0].name]?.play();
     }
   }, [actions, animations]);
 
+  // Smooth flow effect
   const yPosition = useMotionValue(5);
   const ySpring = useSpring(yPosition, { damping: 30 });
+
   useEffect(() => {
     ySpring.set(-1);
   }, [ySpring]);
+
+  // useFrame(() => {
+  //   group.current.position.y = ySpring.get();
+  // });
+
+  // Update position only if necessary (perf optimization)
   useFrame(() => {
-    group.current.position.y = ySpring.get();
+    if (group.current) {
+      const currentY = group.current.position.y;
+      const targetY = ySpring.get();
+      if (Math.abs(currentY - targetY) > 0.001) {
+        group.current.position.y = targetY;
+      }
+    }
   });
   return (
     <group
@@ -127,4 +146,4 @@ export function Astronaut(props) {
   );
 }
 
-useGLTF.preload("/models/tenhun_falling_spaceman_fanart.glb");
+useGLTF.preload("/models/tenhun_falling_spaceman_fanart-v1.glb");
